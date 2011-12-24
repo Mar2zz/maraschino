@@ -1,5 +1,5 @@
 try:
-    from database import *
+    from lib.database import *
 
 except:
     print "You need to specify DATABASE in settings.py, and ensure that Flask-SQLAlchemy is installed."
