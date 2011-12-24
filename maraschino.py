@@ -1,26 +1,29 @@
 from flask import Flask, jsonify, render_template, request
-from database import db_session
+import lib
+from lib.database import db_session
 import hashlib, json, jsonrpclib, random, urllib
 
 app = Flask(__name__)
 
 from settings import *
-from noneditable import *
-from tools import *
 
-from applications import *
-from controls import *
-from currently_playing import *
-from diskspace import *
-from library import *
-from recently_added import *
-from recommendations import *
-from sabnzbd import *
-from sickbeard import *
-from trakt import *
+from lib.noneditable import *
+from lib.tools import *
 
-from modules import *
-from models import Module, Setting
+import plugins
+from plugins.applications import *
+from plugins.controls import *
+from plugins.currently_playing import *
+from plugins.diskspace import *
+from plugins.library import *
+from plugins.recently_added import *
+from plugins.recommendations import *
+from plugins.sabnzbd import *
+from plugins.sickbeard import *
+from plugins.trakt import *
+
+from lib.modules import *
+from lib.models import Module, Setting
 
 @app.route('/')
 @requires_auth
