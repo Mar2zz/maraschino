@@ -1,1 +1,0 @@
-../../../../../../share/pyshared/jinja2/testsuite/res/__init__.py
