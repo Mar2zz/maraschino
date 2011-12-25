@@ -41,6 +41,7 @@ from plugins.recommendations import *
 from plugins.sabnzbd import *
 from plugins.sickbeard import *
 from plugins.trakt import *
+from plugins.transmission import *
 
 from lib.modules import *
 from lib.models import Module, Setting

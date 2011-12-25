@@ -118,6 +118,36 @@ AVAILABLE_MODULES = [
         'delay': 0,
     },
     {
+        'name': 'transmission',
+        'label': 'TransmissionBT',
+        'description': 'Shows you information about your Transmission downloads.',
+        'static': False,
+        'poll': 10,
+        'delay': 0,
+        'settings': [
+            {
+                'key': 'trans_host',
+                'value': '',
+                'description': 'Transmission host',
+            },
+            {
+                'key': 'trans_port',
+                'value': '',
+                'description': 'Transmission port',
+            },
+            {
+                'key': 'trans_user',
+                'value': '',
+                'description': 'Transmission user',
+            },
+            {
+                'key': 'trans_pass',
+                'value': '',
+                'description': 'Transmission password',
+            },
+        ]
+    },
+    {
         'name': 'trakt',
         'label': 'trakt.tv',
         'description': 'Shows you what people are saying about what you are watching and allows you to add your own comments.',
