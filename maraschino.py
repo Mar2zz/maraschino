@@ -18,6 +18,7 @@ from recommendations import *
 from sabnzbd import *
 from sickbeard import *
 from trakt import *
+from transmission import *
 
 from modules import *
 from models import Module, Setting
