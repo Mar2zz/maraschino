@@ -31,17 +31,17 @@ from settings import *
 from lib.noneditable import *
 from lib.tools import *
 
-from plugins.applications import *
-from plugins.controls import *
-from plugins.currently_playing import *
-from plugins.diskspace import *
-from plugins.library import *
-from plugins.recently_added import *
-from plugins.recommendations import *
-from plugins.sabnzbd import *
-from plugins.sickbeard import *
-from plugins.trakt import *
-from plugins.transmission import *
+from modules.applications import *
+from modules.controls import *
+from modules.currently_playing import *
+from modules.diskspace import *
+from modules.library import *
+from modules.recently_added import *
+from modules.recommendations import *
+from modules.sabnzbd import *
+from modules.sickbeard import *
+from modules.trakt import *
+from modules.transmission import *
 
 from lib.modules import *
 from lib.models import Module, Setting
