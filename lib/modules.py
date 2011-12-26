@@ -118,36 +118,6 @@ AVAILABLE_MODULES = [
         'delay': 0,
     },
     {
-        'name': 'transmission',
-        'label': 'TransmissionBT',
-        'description': 'Shows you information about your Transmission downloads.',
-        'static': False,
-        'poll': 10,
-        'delay': 0,
-        'settings': [
-            {
-                'key': 'trans_host',
-                'value': '',
-                'description': 'Transmission host',
-            },
-            {
-                'key': 'trans_port',
-                'value': '',
-                'description': 'Transmission port',
-            },
-            {
-                'key': 'trans_user',
-                'value': '',
-                'description': 'Transmission user',
-            },
-            {
-                'key': 'trans_pass',
-                'value': '',
-                'description': 'Transmission password',
-            },
-        ]
-    },
-    {
         'name': 'trakt',
         'label': 'trakt.tv',
         'description': 'Shows you what people are saying about what you are watching and allows you to add your own comments.',
@@ -183,22 +153,22 @@ AVAILABLE_MODULES = [
                 {
                 'key': 'transmission_ip',
                 'value': '',
-                'description': 'Transmission Hostname',
+                'description': 'Hostname',
                 },
                 {
                 'key': 'transmission_port',
                 'value': '9091',
-                'description': 'Transmission Port',
+                'description': 'Port',
                 },
                 {
                 'key': 'transmission_user',
                 'value': '',
-                'description': 'Transmission Username',
+                'description': 'Username',
                 },
                 {
                 'key': 'transmission_password',
                 'value': '',
-                'description': 'Transmission Password',
+                'description': 'Password',
                 },
         ]
     },
@@ -213,27 +183,27 @@ AVAILABLE_MODULES = [
             {
                 'key': 'sickbeard_api',
                 'value': '',
-                'description': 'Sickbeard API Key',
+                'description': 'API Key',
             },
             {
                 'key': 'sickbeard_user',
                 'value': '',
-                'description': 'Sickbeard Username',
+                'description': 'Username',
             },
             {
                 'key': 'sickbeard_password',
                 'value': '',
-                'description': 'Sickbeard Password',
+                'description': 'Password',
             },
             {
                 'key': 'sickbeard_ip',
                 'value': '',
-                'description': 'Sickbeard Hostname',
+                'description': 'Hostname',
             },
             {
                 'key': 'sickbeard_port',
                 'value': '',
-                'description': 'Sickbeard Port',
+                'description': 'Port',
             },
         ]
     },

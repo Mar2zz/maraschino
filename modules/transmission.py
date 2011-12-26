@@ -4,7 +4,7 @@ import transmissionrpc
 from datetime import timedelta
 from maraschino import app
 from settings import *
-from tools import *
+from lib.tools import *
 
 @app.route('/xhr/transmission')
 @requires_auth
