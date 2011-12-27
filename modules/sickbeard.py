@@ -3,7 +3,7 @@ import json, jsonrpclib, urllib
 
 from maraschino import app
 from settings import *
-from tools import *
+from lib.tools import *
 
 def login_string():
     try:
