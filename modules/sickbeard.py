@@ -231,3 +231,18 @@ def update_show(tvdbid):
         raise Exception
 
     return sickbeard['message']
+
+@app.route('/sickbeard/get_banner/<tvdbid>')
+def get_banner(tvdbid):
+    import StringIO
+    url = '%s/?cmd=show.getbanner&tvdbid=%s' %(sickbeard_url(), tvdbid)
+    img = StringIO.StringIO(urllib.urlopen(url).read())
+    return send_file(img, mimetype='image/jpeg')
+    
+@app.route('/sickbeard/get_poster/<tvdbid>')
+def get_poster(tvdbid):
+    import StringIO
+    url = '%s/?cmd=show.getposter&tvdbid=%s' %(sickbeard_url(), tvdbid)
+    img = StringIO.StringIO(urllib.urlopen(url).read())
+    return send_file(img, mimetype='image/jpeg')
+    
