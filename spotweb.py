@@ -43,7 +43,6 @@ def xhr_spotweb():
 def spot_series():
   try:
     url = '%s&t=tvsearch&cat=5000&o=json&limit=%s' % (spotweb_url(), get_setting_value('spotweb_items'))
-    print url
     result = urllib.urlopen(url).read()
     spotweb = json.JSONDecoder().decode(result)
   except:
