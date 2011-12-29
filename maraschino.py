@@ -17,6 +17,7 @@ from recently_added import *
 from recommendations import *
 from sabnzbd import *
 from sickbeard import *
+from spotweb import *
 from trakt import *
 
 from modules import *

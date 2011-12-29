@@ -177,6 +177,31 @@ AVAILABLE_MODULES = [
             },
         ]
     },
+    {
+        'name': 'spotweb',
+        'label': 'Spotweb',
+        'description': 'Recent spots from Spotweb within Maraschino',
+        'static': False,
+        'poll': 300,
+        'delay': 0,
+        'settings': [
+            {
+                'key': 'spotweb_url',
+                'value': '',
+                'description': 'URL to spotweb',
+            },
+            {
+                'key': 'spotweb_api',
+                'value': '',
+                'description': 'API key',
+            },
+            {
+                'key': 'spotweb_items',
+                'value': '10',
+                'description': 'Items to display',
+            },
+        ]
+    },
 ]
 
 SERVER_SETTINGS = [
