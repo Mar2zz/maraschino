@@ -614,9 +614,30 @@ $(document).ready(function() {
 
   /******  END SICKBEARD Functions  *******/
 
+  /******      SPOTWEB              *******/
 
-
-
+  // View Home
+  $('body').delegate('#spotweb .menu .home', 'click', function(){
+    $.get('/xhr/spotweb', function(data){
+      $('#spotweb').replaceWith(data);
+    });
+  });
+  
+  // View series
+  $('body').delegate('#spotweb .menu .series', 'click', function(){
+    $.get('/spotweb/series', function(data){
+      $('#spotweb').replaceWith(data);
+    });
+  });
+  
+  // View Movies
+  $('body').delegate('#spotweb .menu .movies', 'click', function(){
+    $.get('/spotweb/movies', function(data){
+      $('#spotweb').replaceWith(data);
+    });
+  });
+  
+  /******  END SICKBEARD Functions  *******/
 
   function add_loading_gif(element) {
     $(element).append('<img src="/static/images/xhrloading.gif" class="xhrloading" width="18" height="15" alt="Loading...">');
