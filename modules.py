@@ -178,25 +178,25 @@ AVAILABLE_MODULES = [
         ]
     },
     {
-        'name': 'spotweb',
-        'label': 'Spotweb',
-        'description': 'Recent spots from Spotweb within Maraschino',
+        'name': 'newznab',
+        'label': 'Newznab',
+        'description': 'Recent items from newznab within Maraschino',
         'static': False,
         'poll': 300,
         'delay': 0,
         'settings': [
             {
-                'key': 'spotweb_url',
+                'key': 'newznab_url',
                 'value': '',
-                'description': 'URL to spotweb',
+                'description': 'URL to newznab',
             },
             {
-                'key': 'spotweb_api',
+                'key': 'newznab_api',
                 'value': '',
-                'description': 'API key',
+                'description': 'Newznab API key',
             },
             {
-                'key': 'spotweb_items',
+                'key': 'newznab_items',
                 'value': '10',
                 'description': 'Items to display',
             },

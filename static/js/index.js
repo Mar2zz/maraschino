@@ -614,26 +614,26 @@ $(document).ready(function() {
 
   /******  END SICKBEARD Functions  *******/
 
-  /******      SPOTWEB              *******/
+  /******      NEWZNAB              *******/
 
   // View Home
-  $('body').delegate('#spotweb .menu .home', 'click', function(){
-    $.get('/xhr/spotweb', function(data){
-      $('#spotweb').replaceWith(data);
+  $('body').delegate('#newznab .menu .home', 'click', function(){
+    $.get('/xhr/newznab', function(data){
+      $('#newznab').replaceWith(data);
     });
   });
   
   // View series
-  $('body').delegate('#spotweb .menu .series', 'click', function(){
-    $.get('/spotweb/series', function(data){
-      $('#spotweb').replaceWith(data);
+  $('body').delegate('#newznab .menu .series', 'click', function(){
+    $.get('/newznab/series', function(data){
+      $('#newznab').replaceWith(data);
     });
   });
   
   // View Movies
-  $('body').delegate('#spotweb .menu .movies', 'click', function(){
-    $.get('/spotweb/movies', function(data){
-      $('#spotweb').replaceWith(data);
+  $('body').delegate('#newznab .menu .movies', 'click', function(){
+    $.get('/newznab/movies', function(data){
+      $('#newznab').replaceWith(data);
     });
   });
   
