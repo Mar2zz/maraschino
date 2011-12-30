@@ -245,4 +245,27 @@ def get_poster(tvdbid):
     url = '%s/?cmd=show.getposter&tvdbid=%s' %(sickbeard_url(), tvdbid)
     img = StringIO.StringIO(urllib.urlopen(url).read())
     return send_file(img, mimetype='image/jpeg')
-    
+
+@app.route('/sickbeard/shutdown')
+def shutdown():
+    try:
+        url = '%s/?cmd=sb.shutdown' %(sickbeard_url())
+        result = urllib.urlopen(url).read()
+        sickbeard = json.JSONDecoder().decode(result)
+
+    except:
+        raise Exception
+
+    return sickbeard['message']
+
+@app.route('/sickbeard/restart')
+def restart():
+    try:
+        url = '%s/?cmd=sb.restart' %(sickbeard_url())
+        result = urllib.urlopen(url).read()
+        sickbeard = json.JSONDecoder().decode(result)
+
+    except:
+        raise Exception
+
+    return sickbeard['message']

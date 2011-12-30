@@ -708,6 +708,26 @@ $(document).ready(function() {
     });
   });
 
+  $(document).on('click', '#sickbeard div.powerholder .power', function(){
+    $.get('/sickbeard/shutdown')
+    .success(function(data){
+      alert(data);
+    })
+    .error(function(){
+	  alert('Could not reach Sickbeard.');
+    });
+  });
+  
+  $(document).on('click', '#sickbeard div.powerholder .restart', function(){
+    $.get('/sickbeard/restart')
+    .success(function(data){
+      alert(data);
+    })
+    .error(function(){
+	  alert('Could not reach Sickbeard.');
+    });
+  });
+
   /******  END SICKBEARD Functions  *******/
 
   function add_loading_gif(element) {
