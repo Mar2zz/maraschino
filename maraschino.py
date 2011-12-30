@@ -1,29 +1,6 @@
-import sys
-import os
-
-rundir = os.path.dirname(os.path.abspath(__file__))
-
-try:
-    frozen = sys.frozen
-except AttributeError:
-    frozen = False
-
-# Define path based on frozen state
-if frozen:
-    path_base = os.environ['_MEIPASS2']
-    rundir = os.path.dirname(sys.executable)
-    #path_base = os.path.dirname(sys.executable)
-else:
-    path_base = rundir
-
-# Include paths
-sys.path.insert(0, path_base)
-sys.path.insert(0, os.path.join(path_base, 'modules'))
-sys.path.insert(0, os.path.join(path_base, 'external'))
-
 from flask import Flask, jsonify, render_template, request
 from lib.database import db_session
-import hashlib, json, jsonrpclib, random, urllib
+import hashlib, json, jsonrpclib, random, urllib, sys, os
 
 app = Flask(__name__)
 
@@ -111,7 +88,7 @@ except IOError as e:
                quit()
 
         # create db
-        from database import *
+        from lib.database import *
     except:
         print 'You need to specify a database in settings.py.'
         quit()
