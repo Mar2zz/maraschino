@@ -18,7 +18,7 @@ else:
 
 # Include paths
 sys.path.insert(0, path_base)
-sys.path.insert(0, os.path.join(path_base, 'plugins'))
+sys.path.insert(0, os.path.join(path_base, 'modules'))
 sys.path.insert(0, os.path.join(path_base, 'external'))
 
 from flask import Flask, jsonify, render_template, request
