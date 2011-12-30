@@ -19,7 +19,7 @@ from modules.sabnzbd import *
 from modules.sickbeard import *
 from modules.trakt import *
 from modules.transmission import *
-from newznab import *
+from modules.newznab import *
 
 from lib.modules import *
 from lib.models import Module, Setting
