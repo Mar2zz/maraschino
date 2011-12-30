@@ -1,5 +1,8 @@
 from flask import Flask, jsonify, render_template
-import transmissionrpc
+try:
+    import transmissionrpc
+except:
+    print 'transmissionrpc not found'
 
 from datetime import timedelta
 from maraschino import app
