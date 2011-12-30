@@ -730,6 +730,31 @@ $(document).ready(function() {
 
   /******  END SICKBEARD Functions  *******/
 
+  /******      NEWZNAB              *******/
+
+  // View Home
+  $(document).on('click', '#newznab .menu .home', 'click', function(){
+    $.get('/xhr/newznab', function(data){
+      $('#newznab').replaceWith(data);
+    });
+  });
+  
+  // View series
+  $(document).on('click', '#newznab .menu .series', 'click', function(){
+    $.get('/newznab/series', function(data){
+      $('#newznab').replaceWith(data);
+    });
+  });
+  
+  // View Movies
+  $(document).on('click', '#newznab .menu .movies', 'click', function(){
+    $.get('/newznab/movies', function(data){
+      $('#newznab').replaceWith(data);
+    });
+  });
+  
+  /******  END NEWZNAB Functions  *******/
+
   function add_loading_gif(element) {
     $(element).append('<img src="/static/images/xhrloading.gif" class="xhrloading" width="18" height="15" alt="Loading...">');
   }
