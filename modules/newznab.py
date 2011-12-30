@@ -9,7 +9,7 @@ import json, jsonrpclib, urllib
 
 from maraschino import app
 from settings import *
-from tools import *
+from lib.tools import *
 
 def newznab_url():
     url = '%s/api?apikey=%s' % (get_setting_value('newznab_url'), get_setting_value('newznab_api'))
